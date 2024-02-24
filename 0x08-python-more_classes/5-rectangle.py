@@ -59,18 +59,18 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rect = []
+        my_rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [my_rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+                my_rect.append("\n")
+        return ("".join(my_rect))
 
     def __repr__(self):
         """str representation of the Rect."""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
+        my_rect = "Rectangle(" + str(self.__width)
+        my_rect += ", " + str(self.__height) + ")"
+        return (my_rect)
 
     def __del__(self):
         """Print a messag."""
