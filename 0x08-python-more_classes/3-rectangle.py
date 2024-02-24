@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle.
+    Class that defines properties of a rectangle.
 
     Attributes:
         width (int): width of the rectangle.
@@ -14,8 +14,8 @@ class Rectangle:
         """Creates new instances of Rectangle.
 
         Args:
-            width (int, optional): width of rectangle. Defaults to 0.
-            height (int, optional): height of rectangle. Defaults to 0.
+            width (int, optional): width of the rectangle. Defaults to 0.
+            height (int, optional): height of the rectangle. Defaults to 0.
         """
         self._width = 0
         self._height = 0
@@ -33,7 +33,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Property setter for width of rectangle.
+        """Property setter for width of the rectangle.
 
         Args:
             value (int): width of the rectangle.
@@ -60,7 +60,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Property setter for height of rectangle.
+        """Property setter for height of the rectangle.
 
         Args:
             value (int): height of the rectangle.
@@ -77,7 +77,7 @@ class Rectangle:
             self._height = value
 
     def area(self):
-        """Calculates area of a rectangle.
+        """Calculates area of the rectangle.
 
         Returns:
             int: area.
@@ -85,7 +85,7 @@ class Rectangle:
         return self._height * self._width
 
     def perimeter(self):
-        """Calculates perimeter of a rectangle.
+        """Calculates perimeter of the rectangle.
 
         Returns:
             int: perimeter.
@@ -93,13 +93,13 @@ class Rectangle:
         return 2 * (self._height + self._width) if self._height != 0 and self._width != 0 else 0
 
     def __str__(self):
-        """Prints the rectangle with the character #.
+        """Returns a string representation of the rectangle.
 
         Returns:
-            str: the rectangle.
+            str: the rectangle as a string.
         """
         if self._width == 0 or self._height == 0:
             return ""
 
         rectangle = ["#" * self._width + "\n" for _ in range(self._height)]
-        return "".join(rectangle)
+        return "".join(rectangle).rstrip()
